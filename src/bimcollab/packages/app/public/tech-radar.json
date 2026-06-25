@@ -1,0 +1,108 @@
+{
+  "quadrants": [
+    {
+      "id": "languages-frameworks",
+      "name": "Languages & Frameworks"
+    },
+    {
+      "id": "platforms",
+      "name": "Platforms"
+    },
+    {
+      "id": "tools",
+      "name": "Tools"
+    },
+    {
+      "id": "techniques",
+      "name": "Techniques"
+    }
+  ],
+  "rings": [
+    {
+      "id": "adopt",
+      "name": "Adopt",
+      "color": "#1f85c4",
+      "description": "Proven choices that teams can use confidently."
+    },
+    {
+      "id": "trial",
+      "name": "Trial",
+      "color": "#20b0e7",
+      "description": "Promising choices suitable for controlled use."
+    },
+    {
+      "id": "assess",
+      "name": "Assess",
+      "color": "#f1cf78",
+      "description": "Worth exploring before broader adoption."
+    },
+    {
+      "id": "hold",
+      "name": "Hold",
+      "color": "#e8b341",
+      "description": "Avoid for new work unless there is a specific reason."
+    }
+  ],
+  "entries": [
+    {
+      "id": "typescript",
+      "key": "typescript",
+      "title": "TypeScript",
+      "quadrant": "languages-frameworks",
+      "description": "Default language for Backstage frontend and Node.js application code.",
+      "timeline": [
+        {
+          "ringId": "adopt",
+          "date": "2026-06-25",
+          "description": "Standard for typed application development.",
+          "moved": 0
+        }
+      ]
+    },
+    {
+      "id": "backstage",
+      "key": "backstage",
+      "title": "Backstage",
+      "quadrant": "platforms",
+      "description": "Internal developer portal foundation for catalog, templates, docs, and operational views.",
+      "timeline": [
+        {
+          "ringId": "adopt",
+          "date": "2026-06-25",
+          "description": "Chosen as the software catalog platform.",
+          "moved": 1
+        }
+      ]
+    },
+    {
+      "id": "techdocs",
+      "key": "techdocs",
+      "title": "TechDocs",
+      "quadrant": "tools",
+      "description": "Documentation-as-code published through Backstage.",
+      "timeline": [
+        {
+          "ringId": "trial",
+          "date": "2026-06-25",
+          "description": "Available in the portal and ready for team documentation pilots.",
+          "moved": 1
+        }
+      ]
+    },
+    {
+      "id": "software-templates",
+      "key": "software-templates",
+      "title": "Software Templates",
+      "quadrant": "techniques",
+      "description": "Standardized service creation workflows through Backstage scaffolder templates.",
+      "timeline": [
+        {
+          "ringId": "assess",
+          "date": "2026-06-25",
+          "description": "Use to evaluate repeatable project bootstrapping patterns.",
+          "moved": 1
+        }
+      ]
+    }
+  ]
+}

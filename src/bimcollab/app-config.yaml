@@ -10,6 +10,16 @@ app:
     - page:catalog:
         config:
           path: /
+    - page:tech-radar:
+        config:
+          title: Technology Radar
+          pageTitle: BIMcollab Technology Radar
+          subtitle: Technology guidance for BIMcollab engineering teams.
+    - nav-item:tech-radar:
+        config:
+          title: Technology Radar
+    - api:tech-radar:
+        disabled: true
 
 organization:
   name: BIMcollab Software
