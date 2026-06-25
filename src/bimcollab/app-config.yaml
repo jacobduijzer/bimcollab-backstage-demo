@@ -12,7 +12,7 @@ app:
           path: /
 
 organization:
-  name: My Company
+  name: BIMcollab Software
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
