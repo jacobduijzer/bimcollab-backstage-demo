@@ -75,9 +75,9 @@ Open:
 
 ```text
 http://localhost:3000
+```
 
 Some examples will automatically be loaded. Sometimes it takes a while, just refresh and see if domains are showing up.
-```
 
 ## Useful Checks
 
