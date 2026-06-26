@@ -8,25 +8,38 @@ This is a Backstage demo app configured with BIMcollab branding, GitHub sign-in,
 - Yarn 4, via Corepack
 - A GitHub OAuth app for local sign-in
 
-The GitHub OAuth app callback URL must be:
+## GitHub OAuth Setup
+
+Create a GitHub OAuth app at:
 
 ```text
-http://localhost:7007/api/auth/github/handler/frame
+https://github.com/settings/applications/new
+```
+
+Fill in the fields:
+
+- Homepage URL: `http://localhost:3000`
+- Authorization callback URL: `http://localhost:7007/api/auth/github/handler/frame`
+
+After creating the OAuth app, set the generated client ID and client secret as environment variables:
+
+```sh
+export GITHUB_OAUTH_CLIENT_ID="your-client-id"
+export GITHUB_OAUTH_CLIENT_SECRET="your-client-secret"
 ```
 
 ## Local Configuration
+
+Go to the Backstage app directory:
+
+```sh
+cd src/bimcollab
+```
 
 Create a local config file from the example:
 
 ```sh
 cp app-config.local.example.yaml app-config.local.yaml
-```
-
-Set the GitHub OAuth credentials as environment variables:
-
-```sh
-export GITHUB_OAUTH_CLIENT_ID="your-client-id"
-export GITHUB_OAUTH_CLIENT_SECRET="your-client-secret"
 ```
 
 `app-config.local.yaml` is ignored by git and should not contain committed secrets.
@@ -46,7 +59,7 @@ catalog:
 
 ## Install And Start
 
-Install dependencies:
+From `src/bimcollab`, install dependencies:
 
 ```sh
 yarn install
@@ -62,6 +75,8 @@ Open:
 
 ```text
 http://localhost:3000
+
+Some examples will automatically be loaded. Sometimes it takes a while, just refresh and see if domains are showing up.
 ```
 
 ## Useful Checks
