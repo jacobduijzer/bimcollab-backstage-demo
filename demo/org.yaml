@@ -29,13 +29,13 @@ spec:
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
-kind: group
+kind: Group
 metadata:
   name: admin
 spec:
   type: team
   profile:
-    displayname: Admin
+    displayName: Admin
     email: admin@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
   children: []
@@ -43,13 +43,13 @@ spec:
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
-kind: group
+kind: Group
 metadata:
   name: twin
 spec:
   type: team
   profile:
-    displayname: Twin
+    displayName: Twin
     email: twin@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
   children: []
@@ -75,5 +75,4 @@ spec:
   memberOf: [product]
   profile:
     displayName: Demo User
-
 
