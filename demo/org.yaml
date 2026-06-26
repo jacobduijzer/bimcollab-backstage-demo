@@ -23,22 +23,35 @@ spec:
   profile:
     displayName: Development
     email: development@example.com
-  children: [admin]
+  children: [admin, twin]
   members: []
 
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
-apiVersion: backstage.io/v1alpha1
-kind: Group
+apiversion: backstage.io/v1alpha1
+kind: group
 metadata:
   name: admin
 spec:
   type: team
   profile:
-    displayName: Admin
+    displayname: Admin
     email: admin@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
+  children: []
 
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiversion: backstage.io/v1alpha1
+kind: group
+metadata:
+  name: twin
+spec:
+  type: team
+  profile:
+    displayname: Twin
+    email: twin@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
   children: []
 
 ---
@@ -48,7 +61,7 @@ kind: User
 metadata:
   name: jacob
 spec:
-  memberOf: [admin]
+  memberOf: [admin, twin]
   profile:
     displayName: Jacob Duijzer
 
