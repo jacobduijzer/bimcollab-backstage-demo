@@ -28,7 +28,7 @@ spec:
 
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
-apiversion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1alpha1
 kind: group
 metadata:
   name: admin
@@ -42,7 +42,7 @@ spec:
 
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
-apiversion: backstage.io/v1alpha1
+apiVersion: backstage.io/v1alpha1
 kind: group
 metadata:
   name: twin
