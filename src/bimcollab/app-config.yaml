@@ -140,6 +140,12 @@ catalog:
       rules:
         - allow: [Domain]
 
+    - type: url
+      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/document-management/catalog-info.yaml
+      rules:
+        - allow: [Domain]
+
+
     ## Uncomment these lines to add more example data
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml

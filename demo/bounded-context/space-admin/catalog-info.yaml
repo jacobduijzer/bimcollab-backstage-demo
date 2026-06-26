@@ -13,3 +13,50 @@ metadata:
       icon: dashboard
 spec:
   owner: group:admin
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: space-management
+  description: Complete space management system
+spec:
+  owner: group:admin
+  domain: space-management
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: space-management-service
+  description: Space Management API
+  tags:
+    - dotnet
+    - csharp
+    - webapi
+    - temporal
+spec:
+  type: service
+  lifecycle: production
+  owner: group:admin
+  system: space-management
+  providesApis:
+    - space-management-api
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: space-management-api
+  description: Service to manage spaces
+  links:
+    - url: https://backstage-demo-weather-api.azurewebsites.net/swagger
+      title: Test Api
+      icon: dashboard
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:admin
+  system: space-management-system
+  definition: 
+    $text: https://backstage-demo-weather-api.azurewebsites.net/swagger/v1/swagger.json

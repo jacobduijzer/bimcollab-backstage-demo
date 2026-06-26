@@ -1,6 +1,6 @@
-site_name: 'Space Administration'
-site_description: 'All documentation regarding the Space Administration.'
-repo_url: https://github.com/jacobduijzer/bimcollab-backstage-demo/tree/main/demo/bounded-context/space-admin
+site_name: 'Document Management'
+site_description: 'All documentation regarding document management'
+repo_url: https://github.com/jacobduijzer/bimcollab-backstage-demo/tree/main/demo/bounded-context/document-management
 edit_uri: edit/master/docs
 
 plugins:
