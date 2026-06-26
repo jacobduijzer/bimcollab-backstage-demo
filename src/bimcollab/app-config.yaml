@@ -138,12 +138,12 @@ catalog:
     - type: url
       target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/space-admin/catalog-info.yaml
       rules:
-        - allow: [Domain]
+        - allow: [Domain, System, Component, API]
 
     - type: url
       target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/document-management/catalog-info.yaml
       rules:
-        - allow: [Domain]
+        - allow: [Domain, System, Component, API]
 
 
     ## Uncomment these lines to add more example data

@@ -22,7 +22,7 @@ metadata:
   description: Complete space management system
 spec:
   owner: group:admin
-  domain: space-management
+  domain: space-admin
 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -57,6 +57,6 @@ spec:
   type: openapi
   lifecycle: production
   owner: group:admin
-  system: space-management-system
-  definition: 
-    $text: https://backstage-demo-weather-api.azurewebsites.net/swagger/v1/swagger.json
+  system: space-management
+  #definition: 
+  #  $text: https://backstage-demo-weather-api.azurewebsites.net/swagger/v1/swagger.json
