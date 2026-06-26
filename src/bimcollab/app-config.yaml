@@ -111,23 +111,34 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Domain, Location]
+    - allow: [Component, System, API, Resource, Domain, User, Group, Location]
   locations:
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
-    - type: file
-      target: ../../examples/entities.yaml
+    #- type: file
+    #  target: ../../examples/entities.yaml
 
     # Local example template
-    - type: file
-      target: ../../examples/template/template.yaml
-      rules:
-        - allow: [Template]
+    #- type: file
+    #  target: ../../examples/template/template.yaml
+    #  rules:
+    #    - allow: [Template]
 
     # Local example organizational data
-    - type: file
-      target: ../../examples/org.yaml
+    #- type: file
+    #  target: ../../examples/org.yaml
+    #  rules:
+    #    - allow: [User, Group]
+
+    # Demo organizational data
+    - type: url
+      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/org.yaml
       rules:
         - allow: [User, Group]
+
+    - type: url
+      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/space-admin/catalog-info.yaml
+      rules:
+        - allow: [Domain]
 
     ## Uncomment these lines to add more example data
     # - type: url

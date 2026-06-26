@@ -1,3 +1,18 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: product
+  description: The product department
+spec:
+  type: business-unit
+  profile:
+    displayName: Product 
+    email: product@example.com
+  children: []
+  members: []
+
+---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
