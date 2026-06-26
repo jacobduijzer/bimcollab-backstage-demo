@@ -58,5 +58,9 @@ spec:
   lifecycle: production
   owner: group:admin
   system: space-management
-  #definition: 
-  #  $text: https://backstage-demo-weather-api.azurewebsites.net/swagger/v1/swagger.json
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: Space Management API
+      version: 1.0.0
+    paths: {}

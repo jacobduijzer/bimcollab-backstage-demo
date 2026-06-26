@@ -2,12 +2,28 @@ auth:
   providers:
     github:
       development:
-        clientId: your-github-oauth-client-id
-        clientSecret: your-github-oauth-client-secret
+        clientId: ${GITHUB_OAUTH_CLIENT_ID}
+        clientSecret: ${GITHUB_OAUTH_CLIENT_SECRET}
         signIn:
           resolvers:
             - resolver: usernameMatchingUserEntityName
               dangerouslyAllowSignInWithoutUserInCatalog: true
+
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, API, Resource, Domain, User, Group, Location]
+  locations:
+    - type: file
+      target: ../../../../demo/org.yaml
+
+    - type: file
+      target: ../../../../demo/bounded-context/space-admin/catalog-info.yaml
+
+    - type: file
+      target: ../../../../demo/bounded-context/document-management/catalog-info.yaml
 
 techRadar:
   url: https://raw.githubusercontent.com/jacobduijzer/bimcollab-backstage-demo/refs/heads/main/demo/custom-tech-radar.json

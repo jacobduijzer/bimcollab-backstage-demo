@@ -59,7 +59,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: jacob
+  name: jacobduijzer
 spec:
   memberOf: [admin, twin]
   profile:
@@ -75,4 +75,51 @@ spec:
   memberOf: [product]
   profile:
     displayName: Demo User
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: admindeveloper-01
+spec:
+  memberOf: [admin]
+  profile:
+    displayName: Admin Developer 01
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: admindeveloper-02
+spec:
+  memberOf: [admin]
+  profile:
+    displayName: Admin Developer 02
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: twindeveloper-01
+spec:
+  memberOf: [twin]
+  profile:
+    displayName: Twin Developer 01
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: admindeveloper-01
+spec:
+  memberOf: [twin]
+  profile:
+    displayName: Twin Developer 01
+
+
+
 

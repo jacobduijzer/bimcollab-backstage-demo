@@ -11,6 +11,13 @@ app:
     - page:catalog:
         config:
           path: /
+    - catalog-filter:catalog/kind:
+        config:
+          initialFilter: domain
+    - page:announcements:
+        config:
+          title: Announcements
+    - nav-item:announcements
     - page:tech-radar:
         config:
           title: Technology Radar
@@ -44,6 +51,9 @@ backend:
     origin: http://localhost:3000
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
+  reading:
+    allow:
+      - host: backstage-demo-weather-api.azurewebsites.net
   # This is for local development only, it is not recommended to use this in production
   # The production database configuration is stored in app-config.production.yaml
   database:
@@ -130,20 +140,20 @@ catalog:
     #    - allow: [User, Group]
 
     # Demo organizational data
-    - type: url
-      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/org.yaml
-      rules:
-        - allow: [User, Group]
-
-    - type: url
-      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/space-admin/catalog-info.yaml
-      rules:
-        - allow: [Domain, System, Component, API]
-
-    - type: url
-      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/document-management/catalog-info.yaml
-      rules:
-        - allow: [Domain, System, Component, API]
+#    - type: url
+#      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/org.yaml
+#      rules:
+#        - allow: [User, Group]
+#
+#    - type: url
+#      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/space-admin/catalog-info.yaml
+#      rules:
+#        - allow: [Domain, System, Component, API]
+#
+#    - type: url
+#      target: https://github.com/jacobduijzer/bimcollab-backstage-demo/blob/main/demo/bounded-context/document-management/catalog-info.yaml
+#      rules:
+#        - allow: [Domain, System, Component, API]
 
 
     ## Uncomment these lines to add more example data
