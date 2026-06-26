@@ -8,3 +8,6 @@ auth:
           resolvers:
             - resolver: usernameMatchingUserEntityName
               dangerouslyAllowSignInWithoutUserInCatalog: true
+
+techRadar:
+  url: https://raw.githubusercontent.com/jacobduijzer/bimcollab-backstage-demo/refs/heads/main/demo/custom-tech-radar.json

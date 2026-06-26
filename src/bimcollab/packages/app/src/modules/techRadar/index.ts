@@ -1,5 +1,6 @@
 import {
   ApiBlueprint,
+  configApiRef,
   createApiFactory,
   createFrontendModule,
   fetchApiRef,
@@ -11,13 +12,17 @@ import {
 import type { TechRadarLoaderResponse } from '@backstage-community/plugin-tech-radar-common';
 
 class StaticTechRadarApi implements TechRadarApi {
-  constructor(private readonly fetchApi: typeof fetchApiRef.T) {}
+  constructor(
+    private readonly configApi: typeof configApiRef.T,
+    private readonly fetchApi: typeof fetchApiRef.T,
+  ) {}
 
   async load(): Promise<TechRadarLoaderResponse> {
-    const response = await this.fetchApi.fetch('/tech-radar.json');
+    const url = this.configApi.getOptionalString('techRadar.url') ?? '/tech-radar.json';
+    const response = await this.fetchApi.fetch(url);
 
     if (!response.ok) {
-      throw new Error(`Failed to load tech radar data: ${response.status}`);
+      throw new Error(`Failed to load tech radar data from ${url}: ${response.status}`);
     }
 
     const data = (await response.json()) as TechRadarLoaderResponse;
@@ -41,8 +46,8 @@ const techRadarApi = ApiBlueprint.make({
     defineParams(
       createApiFactory({
         api: techRadarApiRef,
-        deps: { fetchApi: fetchApiRef },
-        factory: ({ fetchApi }) => new StaticTechRadarApi(fetchApi),
+        deps: { configApi: configApiRef, fetchApi: fetchApiRef },
+        factory: ({ configApi, fetchApi }) => new StaticTechRadarApi(configApi, fetchApi),
       }),
     ),
 });
