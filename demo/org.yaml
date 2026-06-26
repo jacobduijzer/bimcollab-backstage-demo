@@ -7,7 +7,7 @@ metadata:
 spec:
   type: business-unit
   profile:
-    displayName: Product 
+    displayName: Product
     email: product@example.com
   children: []
   members: []
@@ -24,18 +24,7 @@ spec:
     displayName: Development
     email: development@example.com
   children: [admin]
-  members: [jacob]
-
----
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: jacob
-spec:
-  memberOf: [admin]
-  profile:
-    displayName: Jacob Duijzer
+  members: []
 
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
@@ -51,3 +40,27 @@ spec:
     picture: https://example.com/groups/bu-infrastructure.jpeg
 
   children: []
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: jacob
+spec:
+  memberOf: [admin]
+  profile:
+    displayName: Jacob Duijzer
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: demo 
+spec:
+  memberOf: [product]
+  profile:
+    displayName: Demo User
+
+
