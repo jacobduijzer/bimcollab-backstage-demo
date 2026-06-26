@@ -1,0 +1,97 @@
+{
+    "title": "Title of your Tech radar",
+    "quadrants": [
+        {
+            "id": "1",
+            "name": "Techniques"
+        },
+        {
+            "id": "2",
+            "name": "Tools"
+        },
+        {
+            "id": "3",
+            "name": "Platforms"
+        },
+        {
+            "id": "4",
+            "name": "Languages-and-frameworks"
+        }
+    ],
+    "rings": [
+        {
+            "id": "adopt",
+            "name": "ADOPT",
+            "color": "#93c47d"
+        },
+        {
+            "id": "trial",
+            "name": "TRIAL",
+            "color": "#93d2c2"
+        },
+        {
+            "id": "assess",
+            "name": "ASSESS",
+            "color": "#fbdb84"
+        },
+        {
+            "id": "hold",
+            "name": "HOLD",
+            "color": "#efafa9"
+        }
+    ],
+    "entries": [
+        {
+            "id": "typescript",
+            "title": "Typescript",
+            "description": "Long description for Typescript",
+            "key": "typescript",
+            "url": "#",
+            "quadrant": "1",
+            "timeline": [
+                {
+                    "moved": 1,
+                    "ringId": "adopt",
+                    "date": "2022-02-08",
+                    "description": "Long description for adopt"
+                },
+                {
+                    "moved": 0,
+                    "ringId": "trial",
+                    "date": "2022-02-06",
+                    "description": "Long description for trial"
+                }
+            ]
+        },
+         {
+            "id": "tanzu",
+            "title": "Tanzu",
+            "description": "VMware Tanzu is a cloud native application platform that enables vital DevSecOps outcomes in a multi-cloud world.",
+            "key": "tanzu",
+            "url": "https://tanzu.vmware.com/platform",
+            "quadrant": "3",
+             "timeline": [
+              {
+                    "moved": 2,
+                    "ringId": "hold",
+                    "date": "2024-05-01",
+                    "description": "Moving to AKS"
+                },
+                  {
+                    "moved": 1,
+                    "ringId": "adopt",
+                    "date": "2022-02-08",
+                    "description": "Started to implement"
+                },
+                {
+                    "moved": 0,
+                    "ringId": "trial",
+                    "date": "2020-02-06",
+                    "description": "Trying out if it will work for us"
+                }
+            
+            ]
+           
+        }
+    ]
+}

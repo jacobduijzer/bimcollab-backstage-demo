@@ -20,6 +20,8 @@ app:
           title: Technology Radar
     - api:tech-radar:
         disabled: true
+    - sign-in-page:app:
+        disabled: true
 
 organization:
   name: BIMcollab Software

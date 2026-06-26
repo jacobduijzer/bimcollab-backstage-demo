@@ -1,0 +1,10 @@
+auth:
+  providers:
+    github:
+      development:
+        clientId: your-github-oauth-client-id
+        clientSecret: your-github-oauth-client-secret
+        signIn:
+          resolvers:
+            - resolver: usernameMatchingUserEntityName
+              dangerouslyAllowSignInWithoutUserInCatalog: true
