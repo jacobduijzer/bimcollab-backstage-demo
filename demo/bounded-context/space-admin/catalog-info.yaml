@@ -2,15 +2,14 @@ apiVersion: backstage.io/v1alpha1
 kind: Domain
 metadata:
   name: space-admin
-  title: Space Admin Bounded Context
-  description: Space administration bounded context
+  description: Space administration
   annotations:
     backstage.io/techdocs-ref: dir:.
   links:
-    - url: http://example.com/bounded-contexts/space-admin/
-      title: Bounded Context Readme
-    - url: http://example.com/bounded-contexts/space-admin/dashboard
-      title: Bounded Context Metrics Dashboard
+    - url: http://example.com/domain/artists/
+      title: Domain Readme
+    - url: http://example.com/domains/artists/dashboard
+      title: Domain Metrics Dashboard
       icon: dashboard
 spec:
   owner: group:admin
