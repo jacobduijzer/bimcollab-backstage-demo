@@ -1,6 +1,7 @@
 app:
   title: Scaffolded Backstage App
   baseUrl: http://localhost:3000
+  disablePublicEntryPoint: true
 
   # Enable all packages by default, this will discover packages from packages/app/package.json
   packages: all
@@ -20,9 +21,6 @@ app:
           title: Technology Radar
     - api:tech-radar:
         disabled: true
-    - sign-in-page:app:
-        disabled: true
-
 organization:
   name: BIMcollab Software
 
@@ -92,8 +90,6 @@ techdocs:
 auth:
   # see https://backstage.io/docs/auth/ to learn about auth providers
   providers:
-    # See https://backstage.io/docs/auth/guest/provider
-    guest: {}
   # see https://backstage.io/docs/ai/mcp-actions#client-id-metadata-documents
   # to learn more about client id metadata documents
   experimentalClientIdMetadataDocuments:

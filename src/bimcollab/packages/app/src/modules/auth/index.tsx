@@ -4,11 +4,11 @@ import { createFrontendModule } from '@backstage/frontend-plugin-api';
 import { SignInPageBlueprint } from '@backstage/plugin-app-react';
 
 const githubSignInPage = SignInPageBlueprint.make({
-  name: 'github',
   params: {
     loader: async () => props => (
       <SignInPage
         {...props}
+        auto
         provider={{
           id: 'github',
           title: 'GitHub',
