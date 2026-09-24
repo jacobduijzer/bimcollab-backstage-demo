@@ -23,7 +23,7 @@ spec:
   profile:
     displayName: Development
     email: development@example.com
-  children: [admin, twin]
+  children: [admin, twin, mesh]
   members: []
 
 ---
@@ -38,6 +38,19 @@ spec:
     displayName: Admin
     email: admin@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
+  children: []
+
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: mesh
+spec:
+  type: team
+  profile:
+    displayName: Mesh
+    email: Mesh@example.com
   children: []
 
 ---
@@ -119,6 +132,36 @@ spec:
   memberOf: [twin]
   profile:
     displayName: Twin Developer 01
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: meshdeveloper-01
+spec:
+  memberOf: [mesh]
+  profile:
+    displayName: Mesh Developer 01
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: meshdeveloper-02
+spec:
+  memberOf: [mesh]
+  profile:
+    displayName: Mesh Developer 02
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: meshdeveloper-03
+spec:
+  memberOf: [mesh]
+  profile:
+    displayName: Mesh Developer 03
 
 
 
